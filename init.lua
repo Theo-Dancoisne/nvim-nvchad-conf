@@ -35,3 +35,6 @@ require "nvchad.autocmds"
 vim.schedule(function()
   require "mappings"
 end)
+
+-- ME
+vim.cmd("source ~/.config/nvim/vimscript/init.vim")
