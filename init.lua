@@ -37,4 +37,5 @@ vim.schedule(function()
 end)
 
 -- ME
-vim.cmd("source ~/.config/nvim/vimscript/init.vim")
+vim.cmd("source " .. vim.fn.stdpath("config") .. "/vimscript/init.vim")
+
