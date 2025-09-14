@@ -8,11 +8,7 @@ return {
   {
     "jay-babu/mason-nvim-dap.nvim",
     opts = {
-      ensure_installed = {
-        -- "lua-language-server", -- move this
-        -- "typescript-language-server", --move this
-        "js-debug-adapter",
-      },
+      ensure_installed = { "js" },
     },
   },
   {
