@@ -1,3 +1,7 @@
+require("mason-nvim-dap").setup({
+    ensure_installed = { "js-debug-adapter" },
+})
+
 local dap = require("dap")
 local dapui = require("dapui")
 local mason_path = vim.fn.stdpath("data") .. "/mason"
