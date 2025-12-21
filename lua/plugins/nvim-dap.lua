@@ -7,6 +7,7 @@ return {
   },
   {
     "jay-babu/mason-nvim-dap.nvim",
+    lazy = false,
     opts = {
       ensure_installed = { "js" },
     },

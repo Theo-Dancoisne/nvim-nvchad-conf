@@ -5,18 +5,22 @@ return {
     opts = require "configs.conform",
   },
 
-  -- These are some examples, uncomment them if you want to see them work!
 
-  -- test new blink
-  -- { import = "nvchad.blink.lazyspec" },
-
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
+  -- ME
+  {
+    -- because it wasn't loaded on Windows at the first press of the Leader key
+    "folke/which-key.nvim",
+    event = "VimEnter", -- or even "VeryLazy"
+  },
+  {
+    -- because some commands are caught by most terminals, see configs/telescope.lua
+    -- but I keep all other NvChad default configs
+    "nvim-telescope/telescope.nvim",
+    opts = function (_, opts)
+     local custom = require "configs.telescope"
+     opts.defaults = vim.tbl_deep_extend("force", opts.defaults, custom.defaults)
+     return opts
+    end,
+  }
 }
+

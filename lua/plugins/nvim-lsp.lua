@@ -1,14 +1,9 @@
 return {
   {
-    "neovim/nvim-lspconfig",
-    config = function()
-      require "configs.lspconfig"
-    end,
-  },
-  {
     "mason-org/mason-lspconfig.nvim",
+    lazy = false,
     opts = {
-      ensure_installed = { "lua_ls", "ts_ls" },
+      ensure_installed = { "lua_ls", "ts_ls", "pyright" },
     },
     dependencies = {
       { "mason-org/mason.nvim", opts = {} },

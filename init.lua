@@ -37,5 +37,15 @@ vim.schedule(function()
 end)
 
 -- ME
+-- 
+-- Load custom vim scripts
 vim.cmd("source " .. vim.fn.stdpath("config") .. "/vimscript/init.vim")
+
+-- Setting up PowerShell 7 properly
+if vim.loop.os_uname().sysname == "Windows_NT" then
+  vim.o.shell = "C:\\Program Files\\PowerShell\\7\\pwsh.exe"
+  vim.o.shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command"
+  vim.o.shellquote = ""
+  vim.o.shellxquote = ""
+end
 
