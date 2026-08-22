@@ -49,3 +49,20 @@ if vim.loop.os_uname().sysname == "Windows_NT" then
   vim.o.shellxquote = ""
 end
 
+-- ltex-ls-plus
+vim.lsp.config("ltex_plus", {
+  settings = {
+    ltex = {
+      -- language = "auto",
+      -- language = "fr",
+      language = "en",
+      completionEnabled = true,
+      dictionary = {
+        fr = {
+          "PixelStarship2",
+        },
+      },
+    },
+  },
+})
+
